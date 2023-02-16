@@ -1,0 +1,550 @@
+Linux is an operating system like windows,MacOs.
+Linux was developed by Linus Thorvalds in 1991, actually it was not his idea to develop an another OS,it was for an updated version of Unix 
+but not accepted by Unix board members.
+
+Structure of Linux.
+
+software applications,user processes,user utility,compilers
+       |
+       |
+System libraries
+       |												
+       |
+    Kernal
+       |
+       |
+ KERNAL MODULES    
+       |
+       |
+HARDWARE[CPU,RAM,I/O DEVICES]
+
+
+KERNAL:
+       Kernal is the core part of the operating system,it establishes connection between  devices and software,and it also manages system resources
+
+It has four main responsibilities
+1.Device management:
+  kernals store all the info about devices connected to the system in device drivers.thIs kernal knows which device can do what but 
+  kernal has a set of rules to be followed by the devices.
+
+2.Memory management:
+ Kernal keeps tarck of used and unused memory and makes sure that processes should not manapulate data of each other using virtual memory addresses
+
+3.Process management:
+in this process management kernal assign enough time and priority  to processes before giving another process to CPU and it also deals with security.
+
+4.Handling system calls:
+means programmers or developers can write a query or ask kernal to perform a task.
+
+
+System Libraries:
+
+ System libraries are used in accessing kernal features..Kernal has to be triggered to perform a task and this trigggering is done by  
+ applications but these applications must know how to place a system call because each kernal has different set of system calls.
+
+ so developers has developed a standard library of procedures that supports each OS,
+ the mainly used system library is GNU-C LIBRARY(GLIBC)
+
+
+SYSTEM TOOLS:
+
+Linux supports a set of system tools which are simple commands, with these commands we can access files,manipulate data in directories or files and anything..
+
+development tools:
+ with kernal, system libraries and system tools our OS is running and working but to update your system we need additional tools and libraries and 
+these tools and libraries are written by programmers and are called toolchain.
+a toolchain is a vital development tool used by developers to produce a working application.
+
+END USER TOOLS:
+
+these tools make a system unique for a user..end tools are not required for OS and these are for end users only..
+
+why linux:
+
+1.Open source and free
+2.secure
+3.so many distribution available like centos,ubuntu,red-hat
+4.fast
+5.less no of malware attacks
+6.widely used by developers from super computers to small electronic gadgets.
+
+
+How linux works?
+
+ Every Linux-based operating system has the Linux kernel and set of software packages to manage hardware resources.
+
+Also, Linux OS includes some core GNU tools to provide a way to manage the kernel resources, install software, configure the security setting and performance, and
+ many more. All these tools are packaged together to make a functional operating system.
+
+Linux features:
+multiuser capability: Multi user can acess the system resources at the same time
+multitasking: more than one function can be performed simultaneously 
+secure: provides security in 3 ways..1.authenticating,2.authorization,3.encryption
+open source: its source code is freely available
+portability:it supports all types of hardwares
+live cd/usb: we can run all linux distros without even installing 
+applications support
+
+LINUX BASH:
+bash is command language intrupter as well as programing language it,s supports varibles and  functions
+and flow control.it can also read and excute the commands from a file.which is called a shell script.
+
+SHELL:
+the terminal contains a shell,it allows us to excute commands and to intract with sysytems.we can perform a various 
+operations such as store and retrive data,proccess information and  various simpe as well as complex tasks.
+like basic operations:Date,cal,pwd,ls..
+
+SCRIPTING:
+Linux supports feature called scripting that allow us to excute more than one task at once
+so its good to define a script rather than perfoming repetative tasks.lets define script is a combination of tasks.
+createa file with .sh extension.
+ex :file is = vi task.sh after click "esc" butoon and after click"i" to insert mode.then write a script afte click"escp" button 
+    and ":wq!" to write code to exit the script
+--- "chmod" command used to give the read and write permisiion to file
+    ex: sudo chmod +x task.sh
+--- "./" is used excute a script file
+      sh task.sh   also executes the script
+    ex: ./task.sh
+
+Linux Set Environment vairble:
+the environment varibles are dynamic that are stored with in system and launched by shell or sub shell.the environment varibles
+custmize the system perfomance and behaviour of an application.
+-- "export" commonds set a new envoronment varible
+    ex: export kesava=500
+--- "echo" commond used to display the envromnent varible
+    ex: echo kesava
+---- "echo $kesav" is used to display the env varible value
+     ex:echo $kesava
+----"env" command used to display the all avilable environment varible
+----"unset" commond is used to remove the environment varible
+     ex:unset kesava
+LINUX SET:
+  linux "set" commond is used to set and unset certain flags are setting within the shell environment.
+---- "set -x" is show the commonds and their arguments and turn on the debugging
+----"set +x" is used to turn off the debugging
+----"set -c" to disble the defaut behaviour of bash
+----set -e" to stop a script immidiatly
+----"export" the export commond is used to without any arguments , will display the all environment varibles
+---- "export -p" is commond is used to display the current shell
+----"export -f" to use a function with the export commond "-f".if we does not use a option its consider as a varible.
+----"printenv" used to print the varibels.
+
+Linux directory commonds:
+ pwd -- show the present directory
+ ls  -- used to show the list of folders
+ cd  -- its used to change the directory
+ mkdir -- create your own directory
+ rmdir -- used to remove the directory
+root directoy --- the rootdirectory is the top most directry of the system
+                  . its denoted  by "/"
+                  .the admin create a user
+home directory -- the home directory is the sub dirctory of root directry
+                  . its denoted by "user/usename"
+                  . each user have a home directory
+
+----"mv" command is used to change the file names
+---- to install the rename in terminal"sudo apt install rename"
+MOST USED COMMONDS:
+----"touch" is used to create a empty files ex:touch demo.txt
+----"cat" commond is used to multipurpose.it can be create a file and display the file content and copy the content one file to another file
+     ex: cat > remo.txt and write script after "ctrl + d" enter to save the script and exit the file
+----"rm" command used to remove a file. Ex: rm demo.txt
+----"rmdir" used to remove the directorys ex:rmdir modi
+----"cp" command used to copy a file or directory. ex: cp demo.txt demo1.txt
+----"mv" move commond used to change a file or directory one location to another location.ex:mv demo.txt Directory
+----"head" commandused to display the first 10 lines of file.ex:head demo.txt
+----"tail" commond used to display the last 10 lines of file. ex:tail demo.txt
+----"tac" commond is used to cat reverse its show the file reverse order. ex:tac demo.txt
+----"su" commond is used to allow access to linux shell to another user.ex: su -s javapoint
+---- chsh -s is used to change the login shell  ex: chsh /bin/sh
+----"id" commond used to display the user id and group id.ex: id
+----"useradd" commond is used to add or remove a user on linux server.x:sudo useradd javapoint
+----"passwd" command is used to chnage are update a password.ex"sudo paasswd JTP
+
+LINUX FILTER COMMONDS:
+-----"cat" commond is also used as filter,to filter a file inside a pipes.
+      ex:cat demo.txt | tac | cat | tac
+-----"cut" commond is used to display the specific column in file. ex: cut -d- -f2 marks.txt
+-----"grep"it is a most powerful and useful filter in linux .it's useful for searching the content from the file with in use pipe.
+     ex: cat marks.txt | grep 9
+-----"comm" command used to comparee two fies or streams. its display the three columns, first colum in non-matching items form first file and 
+      second column in non-matching items from second file and third column in matching file from both files.
+      ex: comm marks.txt demo.txt
+-----"sed" it is also stream editor and  is used to edit files used in regular exprioons .it does not affect to main file.
+     ex: echo class7 | sed "s/class/jtp"
+-----"tee" commond is similar to cat commond only diffrence is it's puts standrd input on standrd output and also write them into file.  
+      ex: cat marks.txt | tee cobra.txt | cat
+-----"tr" commond is used to translate the file content like uppercase to lowercase.
+     ex : cat marks.txt | tr "prcu" "PRCU"
+-----"uniq" commond is used to form a sort list evaery word occur once. ex: sort marks.txt | uniq
+-----"wc" is used to count The lines and charecters in file. ex:wc marks.txt
+-----"od" command is used to display the content diffrently such as in decimal,hexa decimal, and ASCII.
+      EX: od -b marks.txt (decimal)
+          od -t x1 marks.txt (hexa decimal)
+          od -c marks.txt (ASCII)
+-----"sort" command used to sort the file in alphabetical order. EX: sort marks.txt
+-----"gzip" commond is used to truncte the file size.it is a compresion tool.EX: gzip demo.txt demo2.txt
+-----"gunzip" it used to decompressed a file .its reverse to gzip.
+      Ex: gunzip demo.txt demo1.txt
+LINUX UTILITY COMMONDS:
+-----"find" commond used to  find a particular file within a directory.its also supports varios operations
+      such  as by name, by data, by type and more.
+      (.) for current directory and (/) for root. EX:find . -name '*pdf"
+-----"locate" command is same as find commond .itssearch the file in database.
+      EX: locate marks.txt
+-----"zcat" commond is used to dispaly the compressed files.
+      EX:zcat 
+----"df" commmond is used to disk space used in file system.
+-----"mount" commond is used to connect extrnal deevicce file system to systems file system
+
+LINUX NETWORKING COMMONDS:
+-----"ip" is an updated version of ipconfig commond .it is used to assign an ip address , intilize an ip address, disable an interface.
+      EX: ip a or ip addr
+-----"ssh" command used to create a remote connecion through the ssh portal
+      Ex: ssh@ipaddress
+----"mail" command used to  send a mail from the commond line
+     Ex: mail -s "hello" reddymodi@gmail.com
+         cc:
+          hello there
+          hope you ur well
+-----"ping" commond used to check the connectivity between two nods. EX: ping javapoint.com
+-----"host" host commond is usd to display the ip address from the given domain name and vice versa. EX: host javapoint.com 
+
+
+
+whoami--displays name of current username 
+who -- displays all the users logged in the system
+who am i --shows info about current user only
+w -- shows who logged in and what they are doing.
+
+
+To create a user:  sudo useradd name
+to create a group: sudo groupadd name
+
+to add a user to a particular group: sudo usermod -a -G groupname username
+to add a user to multiple groups: sudo usermod -a -G primarygrpname, groupname1, grpname2 username
+ to list all the groups in system: getent groups
+to del a user from group: sudo gpasswd -d usrname grpname
+
+-G is to change secondary group
+-g is to change primary group
+
+
+file systems:
+
+ext,ext2,ext3,ext4  are extended file systems which were used in minix os, these are no longer used, these are old versions
+among all these extended file systems ext4 is faster and it is the default file system in linux distributions
+
+JFS FILE SYSTEM:
+
+Journaled file system, it is developed by IBM for AIX unix.it can be used in place of ext4, it is a handy file system when CPU power is limited.
+
+ReiserFS file system:  it is an alternative file system for ext3, it has so many drawbacks
+
+XFS file system:  it is cosidered as the high speed jornled file system which is developed for parallel I/O proccessing. 
+NASA is still using this file system with its high storage server 300+ terabyte server.
+
+Btrfs--B tree file system, it is used for fault tolerance ,repair system, extensive storage configuration,it is not good for production system
+
+Swap file system: 
+
+
+PRINT:
+
+Ip file_name  -- to print a file
+
+Ipstat -p -d  : to list all the printers connected
+
+Ip -d printer_name  file_name
+Ipr -P printer_name  file_name  : to print file from particular printer
+
+Ipoptions -d printer_name  : to set the default printer
+
+Ip -n number_of_copies file_name:  to print multiple copies
+Ipr _#number file_name
+
+cancel job-id : to cancel the queued job
+
+to see job-id use Ipq or Ipstat commands
+
+to move to queued print job to another printer :  Ipmove job-id dest_printer_name
+
+to print two sides of the page:  Ip -o sides=two-sided-short-edge file_name
+                                 Ip -o sides=two-sided-long-edge file_name
+
+
+Processes::
+
+many programs may  take place in RAM or in CPU by OS or by users, these programms are called as Processes.
+
+Process will be terminated on its own when completed or when we kill it
+ some processes will hang up due to errors or due to consuming high CPU% etc,we need to kill those processes else our system will hang up
+
+to kill a process we need to know the process information like Process id(PID),signal and more
+top-- to know all the running processes with PID, name,cpu% etc
+gs aux -- to know all the running processes.. 
+	a- to display processes running by all users
+	u-   to display processes running by particular user
+	x- to display processes running by GUI
+
+gs is more useful than top
+
+
+KILLING Processes:; we can kill a running process using the commands kill,pkill
+
+when we use kill commands linux will send the signals to the processes, that signal name is called 'SIGKILLS or "SIGTERM"
+
+by default linux sends SIGKILLS signals
+
+killall -i process_name : to kill a process interactively
+
+killall -o time process_name  : to kill a process which is running more than given time
+killall -y time process_name  : to kill a process which is running less than given time
+
+time needed be mentioned clearly
+
+seconds-s
+minitues - m
+days -d
+weeks - w
+months- m
+years - y
+
+
+signal name      signal num  	 use
+
+SIGHUP		   1		Hangup
+ 
+SIGNULL		   0 		NULL,check access to PID
+
+SIGIN		   2		interrupt
+
+SIGQUIT		   3	   	QUIT
+
+SIGKILL		   9            kill
+
+SIGTERM		   15		terminate
+
+SIGSTOP		   24 		stop
+
+
+SIGTSP		   25 		stop/pause the process
+
+SIGCONT		   26 		continue a stopped process
+
+to list all the signal names:  kill -l(alphabet L)
+
+nohup command is used to run a process even after exitting from shell,
+it ignores all the hang up signals and keeps running in the background.
+
+ The best usage of nohup commands is in memory check, synchronization, restarting a server, and more.
+ It is also advantageous when we run a program over ssh.
+
+to check nohup version :  nohup --version
+
+to start a background process: nohup cat hello.sh
+  it will run in the background and stores the output in nohup.out file
+we can store the output in another file as well using the command
+
+nohup cat hello.sh > new file
+
+use & symbol at the end to redirect the process to background
+ex: nohup ping w3schools.com &
+
+to see the background processes running in the system
+  pgrep -a ping 
+
+at command is used to execute a task at a scheduled time.
+
+atq- to display the user's pending tasks with task id,date,hour,queue and username
+
+atrm job_no  - it is used to delete tasks 
+
+at -c job_no -- to see which command or job is scheduled.
+
+
+
+File structure and directories:
+
+Binary directroy:  /bin, /sbin
+configuration : /etc, /boot
+memory: /dev ,/proc ,/sys
+data : /home, /root
+variable : /var/log , /var/cache
+optional packages : /opt
+unix system respurces : /usr/bin , /usr/lib
+
+
+AWK COMMAND:
+
+The Awk is a powerful scripting language used for text scripting
+It acts as a filter in Linux. It is also referred as gawk (GNU awk) In Linux.
+
+awk '{ print "Welcome to Awk command"}'
+
+awk '{ print "kesava raju kanumuri"}'
+ex:
+   create a file and perfome awk operations on that file
+
+  cat > student.txt
+Sam CS
+Daniel CS
+John IT
+Arya IT
+Mike ECE
+
+to list file contents in specific pattern
+
+awk '/CS/ {print}' students.txt
+Sam CS
+Daniel CS
+
+awk '/ECE/ {print}' students.txt
+Mike ECE
+
+If u don't mention any pattern it will list all the file contents
+
+awk '{print}' students.txt
+
+Sam CS
+Daniel CS
+John IT
+Arya IT
+Mike ECE
+
+
+to print selected columns in the file
+
+awk '{print $1,$3}' students.txt
+
+Sam            it is showing only 1st column bcz no 3rd column in that file content
+Daniel 
+John 
+Arya 
+Mike 
+
+awk '{print $1,$2}' students.txt
+
+Sam CS
+Daniel CS
+John IT
+Arya IT
+Mike ECE
+
+NR -- it is used to display the line numbers in that file
+$0 -- will print all columns
+$1 - will print 1st column only
+$2 - will print 2nd column only  like that
+
+awk '{print NR,$0}' students.txt
+1 Sam CS
+2 Daniel CS
+3 John IT
+4 Arya IT
+5 Mike ECE
+
+awk '{print NR,$1}' students.txt
+1 Sam 
+2 Daniel 
+3 John 
+4 Arya 
+5 Mike 
+
+awk '{print NR,$2}' students.txt
+1 CS
+2 CS
+3 IT
+4 IT
+5 ECE
+
+
+NF -- is used to print last column of the file
+
+awk '{print $NF}' students.txt
+CS
+CS
+IT
+IT
+ECE
+
+awk '{print $NF,$0}' students.txt
+
+CS Sam CS
+CS Daniel CS
+IT John IT
+IT Arya IT
+ECE Mike ECE
+
+awk '{print $NF,$1}' students.txt
+CS Sam 
+CS Daniel 
+IT John 
+IT Arya 
+ECE Mike 
+
+awk '{print $NF,$2}' students.txt
+CS CS
+CS CS
+IT IT
+IT IT
+ECE ECE
+
+awk 'BEGIN { ORS ="-"} {print}' student.txt
+-Sam CS--Daniel CS--John IT--Arya IT--Mike ECE-
+
+awk 'BEGIN { ORS ="/"} {prin}' student.txt
+/Sam CS//Daniel CS//John IT//Arya IT//Mike ECE/
+
+whatever we give at ORS= will print at start and at the end of the every line
+we can use special symbols at ORS
+
+BEGIN word is optional, same result either use BEGIN or not
+
+
+we can use for loops as well in awk command:
+
+awk '{ for(i=1;i<=10;i++) print "square of" ,i,"is",i*i;}'
+
+square of 1 is 1
+square of 2 is 4
+square of 3 is 9
+square of 4 is 16
+square of 5 is 25
+square of 6 is 36
+square of 7 is 49
+square of 8 is 64
+square of 9 is 81
+square of 10 is 100
+
+ex-2:
+ cat kesav.txt
+kesav,99,100
+modi,98,100
+siva,35,100
+gokul,40,100
+
+awk -F"," '{x+=$2}END{print x}' kesav.txt
+272
+awk -F"," '{x+=$3}END{print x}' kesav.txt
+400
+
+-F is used identify the columns 
+whatever we give in "" is considered as the column breaker
+
+we can do all mathematical operations as well in awk
+
+awk 'BEGIN {x=4;y=5;z=x+y; print z}'
+9
+awk 'BEGIN {print 2+3}'
+5
+awk 'BEGIN {print 2*3}'
+6
+
+
+MAKE COMMAND:
+
+The Linux make command is used to build and maintain groups of programs and files from the source code.
+It assists developers to install and compile many utilities from the terminal.
+
+The make command takes targets as arguments. These arguments are specified in 'Makefile.'
+ The makefile contains the targets as well as associated actions related to these targets

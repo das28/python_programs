@@ -1,0 +1,107 @@
+what is shell?
+interface between user and kernal.
+CLI is a shell 
+shell: shell is set of commands which is written to do a task repeatedly.
+it also allows to communicate to between the kernal and the user.
+
+Find Your Shell
+echo $0
+available shells  "cat/etc/shells"
+your shell? /etc/password
+
+types of shells:
+there are two major types of shell-
+1. Bourne shell
+2. C shell
+
+1. Bourne shell : this is the default shell for version 7 unix. 
+the character "$" is the default prompt for the bourne  shell. 
+it have different subcategoriies in this shell are korn shell, bourne again shell,
+POSIX sell etc.
+
+2. C shell: this is a unix shell a command processor that is run in a text window.
+the character "%" is the default prompt for the C shell.
+file commands can also be read easily by C shell, which is known as script.
+
+sample of shell scripting
+
+#!/bin/sh (shebang line)
+
+echo "what is your name?"
+read PERSON 
+echo "Hello, $PERSON"
+
+to know shell types on your system :
+$ cat /etc/shells
+
+passing argument 
+ 
+ 1st way to pass argumenet
+
+ #!/bin/bash
+ echo $1 $2 $3 '> echo $1 $2 $3'
+
+ run the script
+ ./name_of_script tom mark john
+
+$0 will print your script name...it will store the name of the script at $0 by default.
+
+2nd way to pass argument
+
+#!/bin/bash
+args = ("$@")
+echo ${args[0]} ${args[1]} ${args[2]} ${args[3]}
+echo $@ (for printing all the argument at a time)
+echo $# (to knw the number of arguments)
+
+if statement in shell scripting
+
+#!/bin/bash
+
+count=10 
+
+if [ $count -eq 10 ]
+then
+    echo "condition is true
+fi
+
+for string to be compaired 
+
+#!/bin/bash
+
+word = abc
+
+if [ $word == "abc" ]
+then 
+    echo "condition is true"
+fi
+
+whenever you use angle brakets with strings you need to use square brackets 
+
+#!/bin/bash
+
+word = a
+
+if [[ $word < "b" ]]
+then 
+    echo "condition is true"
+else
+    echo "condition is false"
+fi
+
+
+for multiple conditions
+
+#!/bin/bash
+
+word = a
+
+if [[ $word == "b" ]]
+then 
+    echo "condition b is true"
+elif [[ $word == "a" ]]
+then
+    echo "condition a is true"
+else
+    echo "condition is false"
+fi
